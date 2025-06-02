@@ -1,5 +1,6 @@
 ﻿@using Microsoft.AspNetCore.Components
 @using Microsoft.AspNetCore.Components.Routing
+@rendermode InteractiveServer
 
 <nav class="bg-white shadow-lg">
     <div class="max-w-6xl mx-auto px-4">
@@ -46,7 +47,7 @@
     </div>
 
     <!-- Mobile Menu -->
-    <div class="@(_isOpen ? 'block' : 'hidden') md:hidden">
+    <div class="@(_isOpen ? "block" : "hidden") md:hidden">
         <NavLink class="block py-2 px-4 text-sm hover:bg-gray-200" href="" Match="NavLinkMatch.All">
             Home
         </NavLink>
