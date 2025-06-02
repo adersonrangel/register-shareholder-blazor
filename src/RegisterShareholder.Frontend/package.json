@@ -1,0 +1,12 @@
+{
+  "scripts": {
+    "twd": "npx @tailwindcss/cli -i ./src/css/site.css -o ./wwwroot/app.css --watch"
+  },
+  "devDependencies": {
+    "vite": "^6.3.5"
+  },
+  "dependencies": {
+    "@tailwindcss/cli": "^4.1.8",
+    "tailwindcss": "^4.1.8"
+  }
+}
