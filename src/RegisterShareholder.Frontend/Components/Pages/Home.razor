@@ -2,49 +2,45 @@
 
 <PageTitle>Home</PageTitle>
 
+
 <div class="m-2">
-<div class="flex flex-col font-roboto items-center justify-center w-full h-42 bg-yellow-500 rounded-lg shadow-md p-4">  
+  <div class="flex flex-col font-roboto items-center justify-center w-full h-42 bg-yellow-500 rounded-lg shadow-md p-4">      
+    <p>
+        Welcome to the home page of our Blazor application! This is a simple example of how to create a basic Razor Page. 
+    </p>
+  </div>
+  <div class="max-w-md mx-auto bg-white p-6 rounded-lg shadow-lg mt-8">
+  <div class="flex mb-4">    
   <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-file-earmark-break" viewBox="0 0 16 16">
     <path d="M14 4.5V9h-1V4.5h-2A1.5 1.5 0 0 1 9.5 3V1H4a1 1 0 0 0-1 1v7H2V2a2 2 0 0 1 2-2h5.5zM13 12h1v2a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2v-2h1v2a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1zM.5 10a.5.5 0 0 0 0 1h15a.5.5 0 0 0 0-1z"/>
   </svg>
-  <p >Ingrese la información del accionista.</p>
-</div>
-<div class="mt-4 font-roboto text-md">
-  <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Soluta eius sunt, quos quidem repellendus corrupti voluptatibus, libero vitae et animi natus excepturi velit ut consequuntur, magni enim voluptatem. Inventore, in?</p>
-</div>
+      <h2 class="text-2xl font-bold text-gray-800 mb-6">Datos de empleado</h2>
+  </div>
+      <form method="post" id="formEmpleado" class="space-y-4">
+          <div class="flex flex-col">
+              <label asp-for="" class="text-sm font-medium text-gray-700 mb-1">Nombre:</label>
+              <input type="text"  
+                  class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"/>
+              
+          </div>
+          <div class="flex flex-col">
+              <label asp-for="" class="text-sm font-medium text-gray-700 mb-1">Apellido:</label>
+              <input type="text"
+                  class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"/>
+          </div>
+          <div class="flex flex-col">
+              <label asp-for="" class="text-sm font-medium text-gray-700 mb-1">Edad:</label>
+              <input type="number" asp-for="" 
+                  class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"/>
+            
+          </div>
 
-    <section class="overflow-x-auto mt-6">
-    <table class="min-w-full table-auto border-collapse bg-white shadow-lg rounded-lg">
-      <thead>
-        <tr class="bg-gray-950 text-white border-b">
-          <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Nombre</th>
-          <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Apellido</th>
-          <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Edad</th>
-          <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Fecha</th>
-          <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Acciones</th>
-        </tr>
-      </thead>
-      <tbody class="bg-white divide-y divide-gray-200">
-        @foreach (var game in games)
-        {
-            <tr class="hover:bg-gray-50 transition-colors">
-                <td class="px-6 py-4 whitespace-nowrap">@game.Name</td>
-                <td class="px-6 py-4 whitespace-nowrap">@game.Genre</td>
-                <td class="px-6 py-4 whitespace-nowrap">@game.Price.ToString("C2")</td>
-                <td class="px-6 py-4 whitespace-nowrap">@game.ReleaseDate.ToString("dd/MM/yyyy")</td>
-                <td class="px-6 py-4 whitespace-nowrap">
-                    <button class="text-white bg-blue-500 hover:bg-blue-600 rounded-lg px-4 py-2 transition-colors">
-                        Editar
-                    </button>
-                </td>
-            </tr>
-        }        
-      </tbody>
-    </table>
-  </section>
-
+          <button type="submit" class="w-full mt-6 px-4 py-2 bg-blue-500 text-white font-medium rounded-lg hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-colors" id="btnAddUser">
+          Crear
+          </button>
+      </form>
+  </div>
 </div>
-
 
 @code {
  
